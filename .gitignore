@@ -4,3 +4,4 @@ node_modules
 *.map
 /core/*.js
 *.js
+client
