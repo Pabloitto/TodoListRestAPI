@@ -27,8 +27,8 @@ class Server {
     }
 
     init() {
-        this.app.use(bodyParser.json({ limit: '50mb' }));
-        this.app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
+        this.app.use(bodyParser.json());
+        this.app.use(bodyParser.urlencoded({ extended: true }));
         this.app.use(express.static(path.resolve(__dirname, 'client')));
         this.initRoutes();
         this.startServer();
