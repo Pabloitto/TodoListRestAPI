@@ -1,6 +1,4 @@
 import { TodoRouter } from './routes/todo-routes';
-"use strict";
-
 import * as http from 'http';
 import * as path from 'path';
 import * as express from 'express';
@@ -25,9 +23,7 @@ class Server {
     startServer() {
         this.app.set('port', (process.env.PORT || 4800));
         let port = this.app.get('port');
-        this.app.listen(port, function () {
-            console.log('Node app is running on port', port);
-        });
+        this.app.listen(port, () => console.log('Node app is running on port', port));
     }
 
     init() {
